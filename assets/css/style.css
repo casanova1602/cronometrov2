@@ -1,0 +1,127 @@
+
+:root {
+    --primary-color: #C3526D;
+    --primary-color-darker: #A73B55;
+    --light-primary : #D1778C;
+    --gray : #9e9e9e;
+    --light-gray : #D7D7D7;
+    
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, form label, form button {
+    display: block;
+    width : 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+form button {
+    border: none;
+    background-color: var(--primary-color);
+    color: aliceblue;
+    font-size: 20px;
+    height: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover{
+    background-color: var(--primary-color-darker);
+}
+
+.clock{
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace; /* Fonte monoespaçada */
+    text-align: center;
+    color: black;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    margin: 0 auto;
+}
+
+.h1-resul, .resultados{
+    padding: 0 10px;
+}
+
+.h1-resul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+.iniciar, .zerar, .pausar, .gravar, .limpar{
+    width: 30%;
+    height: 30px;
+    color: var(--light-gray);
+    background-color: var(--primary-color-darker);
+    font-weight: bold;
+    border: none;
+}
+
+.iniciar:disabled, .zerar:disabled, .pausar:disabled, .gravar:disabled, .limpar:disabled{
+    background-color: var(--light-primary);
+    font-weight: lighter;
+}
+
+#icon-clock{
+    font-size: 3em;
+    color: var(--gray);
+    font-weight: bolder;
+}
+
+.flex-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+    color: black;
+    text-align: center;
+}
+
+.desaparecer{
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .container{
+        max-width: 400px;
+    }
+}
